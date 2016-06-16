@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Types>
+ 
+  <Type>
+    <Name>MyObject</Name>
+    <Members>
+       <AliasProperty>
+        <Name>MyName</Name>
+        <ReferencedMemberName>Name</ReferencedMemberName>
+      </AliasProperty>
+
+      <AliasProperty>
+        <Name>MyFamily</Name>
+        <ReferencedMemberName>LastName</ReferencedMemberName>
+      </AliasProperty>
+    </Members>
+  </Type>
+
+  <Type>
+    <Name>System.String</Name>
+    <Members>
+      <ScriptProperty>
+        <Name>IsUNCPath</Name>
+        <GetScriptBlock>$this -match "^\\\\\w+"</GetScriptBlock>
+      </ScriptProperty>
+    </Members>
+  </Type>
+
+</Types>
